@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ekored'
 ]
 
 MIDDLEWARE = [
@@ -73,12 +74,36 @@ WSGI_APPLICATION = 'ekored_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlserver',
+#         'NAME': 'Iris_DB',
+#         'USER': 'idt_campus',
+#         'PASSWORD': 'Campus1dtzozo',
+#         'HOST': '104.36.166.93',  # Replace 'IP' with the actual IP address or hostname of your SQL Server
+#         'PORT': '',    # Leave it empty to use the default port
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         },
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': {
+            'ENGINE': 'mssql',
+            'NAME': 'Iris_DB',
+            'USER': 'idt_campus',
+            'PASSWORD': 'Campus1dtzozo',
+            'HOST': '104.36.166.93',
+            'PORT': '',
+            'OPTIONS': {
+                'driver': 'ODBC Driver 17 for SQL Server',
+            },
+        },
     }
-}
+
+# set this to False if you want to turn off pyodbc's connection pooling
+# DATABASE_CONNECTION_POOLING = False
 
 
 # Password validation
