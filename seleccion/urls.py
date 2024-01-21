@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from recepcion import views as recepcionViews
+from seleccion import views as seleccionViews
 
 urlpatterns = [
-  path('', recepcionViews.home),
+  path('', seleccionViews.home),
 ]
