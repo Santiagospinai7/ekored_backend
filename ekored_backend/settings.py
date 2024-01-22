@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'ekored_backend.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'mssql',
-            'NAME': 'Iris_DB',
+            'NAME': 'dbEkoRed',
             'USER': 'idt_campus',
             'PASSWORD': 'Campus1dtzozo',
             'HOST': '104.36.166.93',
