@@ -76,20 +76,6 @@ WSGI_APPLICATION = 'ekored_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlserver',
-#         'NAME': 'Iris_DB',
-#         'USER': 'idt_campus',
-#         'PASSWORD': 'Campus1dtzozo',
-#         'HOST': '104.36.166.93',  # Replace 'IP' with the actual IP address or hostname of your SQL Server
-#         'PORT': '',    # Leave it empty to use the default port
-#         'OPTIONS': {
-#             'driver': 'ODBC Driver 17 for SQL Server',
-#         },
-#     }
-# }
-
 DATABASES = {
         'default': {
             'ENGINE': 'mssql',
