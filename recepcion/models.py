@@ -247,3 +247,20 @@ class ConfiguracionBascula(models.Model):
 
   def __str__(self):
     return self.id_bascula
+  
+class VerificacionBascula(models.Model):
+  class Meta:
+    db_table = '[bascula].[tblEKOVerificacionBasculas]'
+
+  consecutivo = models.UUIDField(
+        primary_key = True, 
+        default = uuid.uuid4,
+        editable = False, 
+        unique=True
+        ) 
+  id_bascula = models.ForeignKey(ConfiguracionBascula, on_delete=models.CASCADE)
+  usuario = models.CharField(max_length=10)
+  fecha = models.DateField(auto_now=False, auto_now_add=False)
+  verificacion = models.BooleanField()
+  observacion = models.CharField(max_length=1000)
+  dispositivo = models.CharField(max_length=50)
