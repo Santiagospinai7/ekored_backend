@@ -80,8 +80,8 @@ DATABASES = {
         'default': {
             'ENGINE': 'mssql',
             'NAME': 'dbEkoRed',
-            'USER': 'idt_campus',
-            'PASSWORD': 'Campus1dtzozo',
+            'USER': 'idtSQL',
+            'PASSWORD': '1dt2O24++',
             'HOST': '104.36.166.93',
             'PORT': '',
             'OPTIONS': {

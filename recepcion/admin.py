@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import tblEKOProveedores, tblEKOAcopio, tblEKOTicket, tblEKOZona
+from .models import Proveedor, Acopio
 
 # Register your models here.
-admin.site.register(tblEKOProveedores)
-admin.site.register(tblEKOAcopio)
-admin.site.register(tblEKOTicket)
-admin.site.register(tblEKOZona)
+admin.site.register(Proveedor)
+admin.site.register(Acopio)
