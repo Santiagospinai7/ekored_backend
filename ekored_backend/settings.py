@@ -31,43 +31,43 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'recepcion',
-    'seleccion',
-    'autenticacion'
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+  'recepcion',
+  'seleccion',
+  'autenticacion'
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+  'django.middleware.security.SecurityMiddleware',
+  'django.contrib.sessions.middleware.SessionMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.middleware.csrf.CsrfViewMiddleware',
+  'django.contrib.auth.middleware.AuthenticationMiddleware',
+  'django.contrib.messages.middleware.MessageMiddleware',
+  'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'ekored_backend.urls'
 
 TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
+  {
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [],
+    'APP_DIRS': True,
+    'OPTIONS': {
+      'context_processors': [
+        'django.template.context_processors.debug',
+        'django.template.context_processors.request',
+        'django.contrib.auth.context_processors.auth',
+        'django.contrib.messages.context_processors.messages',
+      ],
     },
+  },
 ]
 
 WSGI_APPLICATION = 'ekored_backend.wsgi.application'
@@ -77,18 +77,29 @@ WSGI_APPLICATION = 'ekored_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'mssql',
-            'NAME': 'dbEkoRed',
-            'USER': 'idtSQL',
-            'PASSWORD': '1dt2O24++',
-            'HOST': '104.36.166.93',
-            'PORT': '',
-            'OPTIONS': {
-                'driver': 'ODBC Driver 17 for SQL Server',
-            },
-        },
-    }
+  'default': {
+    'ENGINE': 'mssql',
+    'NAME': 'dbEkoRed',
+    'USER': 'idtSQL',
+    'PASSWORD': '1dt2O24++',
+    'HOST': '104.36.166.93',
+    'PORT': '',
+    'OPTIONS': {
+      'driver': 'ODBC Driver 17 for SQL Server',
+    },
+  },
+  'auth': {
+    'ENGINE': 'mssql',
+    'NAME': 'dbGnlPlanta',
+    'USER': 'idtSQL',
+    'PASSWORD': '1dt2O24++',
+    'HOST': '104.36.166.93',
+    'PORT': '',
+    'OPTIONS': {
+      'driver': 'ODBC Driver 17 for SQL Server',
+    },
+  }
+}
 
 # set this to False if you want to turn off pyodbc's connection pooling
 # DATABASE_CONNECTION_POOLING = False
