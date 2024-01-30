@@ -4,4 +4,5 @@ from autenticacion import views as autenticacionViews
 
 urlpatterns = [
   path('', autenticacionViews.home),
+  path('validate', autenticacionViews.login)
 ]
